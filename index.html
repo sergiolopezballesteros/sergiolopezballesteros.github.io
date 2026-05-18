@@ -1,0 +1,1428 @@
+<!doctype html>
+
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SERGIO_LOPEZ_BALLESTEROS | PORTFOLIO</title>
+    <meta
+      name="description"
+      content="Sergio López Ballesteros — Frontend Software Engineer freelance · 16 años en Angular, Nuxt e Ionic"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #131313;
+        background-image: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.05) 0px,
+          rgba(0, 0, 0, 0.05) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+      }
+      .phosphor-glow-sm {
+        box-shadow: 0 0 15px rgba(255, 176, 0, 0.15);
+      }
+      .terminal-cursor::after {
+        content: "_";
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        from,
+        to {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1c1b1b;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #ffb000;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ffc44d",
+              "on-secondary-container": "#c3a58a",
+              "error-container": "#93000a",
+              "inverse-primary": "#6e4b00",
+              "on-secondary-fixed": "#211400",
+              "surface-container-highest": "#353534",
+              "on-primary-container": "#714c00",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-container": "#7a5b3c",
+              "surface-dim": "#131313",
+              "surface-container-low": "#1c1b1b",
+              "surface-variant": "#353534",
+              "on-primary-fixed": "#221700",
+              "on-tertiary-fixed": "#2c1701",
+              "on-surface-variant": "#ccb8b2",
+              "surface-tint": "#ffb000",
+              "on-secondary": "#392300",
+              tertiary: "#fff8f4",
+              "on-primary-fixed-variant": "#533900",
+              "surface-container-high": "#2a2a2a",
+              primary: "#fffae2",
+              "primary-fixed-dim": "#ffb000",
+              "surface-container-lowest": "#0e0e0e",
+              "on-error": "#690005",
+              "on-background": "#e5e2e1",
+              surface: "#131313",
+              "on-tertiary": "#442b10",
+              "outline-variant": "#4b4237",
+              "surface-bright": "#3a3939",
+              "tertiary-fixed": "#ffdcbd",
+              "tertiary-container": "#ffd5ae",
+              "inverse-on-surface": "#313030",
+              "secondary-fixed": "#f1cfb5",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-fixed-dim": "#e7bf99",
+              "primary-container": "#ffb000",
+              secondary: "#d5b29a",
+              "on-secondary-fixed-variant": "#51351b",
+              "on-tertiary-fixed-variant": "#5d4124",
+              "secondary-container": "#51351b",
+              "on-error-container": "#ffdad6",
+              "surface-container": "#201f1f",
+              "secondary-fixed-dim": "#d5b29a",
+              "on-primary": "#392300",
+              background: "#131313",
+              error: "#ffb4ab",
+              outline: "#968b7e",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Inter"],
+              label: ["Space Grotesk"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-8 h-16 phosphor-glow-sm"
+    >
+      <div
+        class="text-xl font-bold tracking-tighter text-[#FFB000] font-headline uppercase"
+      >
+        SERGIO_LOPEZ
+      </div>
+      <div
+        class="hidden md:flex gap-8 font-headline tracking-[-0.02em] uppercase text-xs"
+      >
+        <a
+          class="text-[#FFB000]/60 hover:text-[#FFB000] hover:bg-[#FFB000]/10 transition-colors active:scale-95 duration-100"
+          href="#archive"
+          >PROYECTOS</a
+        >
+        <a
+          class="text-[#FFB000]/60 hover:text-[#FFB000] hover:bg-[#FFB000]/10 transition-colors active:scale-95 duration-100"
+          href="#history"
+          >EXPERIENCIA</a
+        >
+        <a
+          class="text-[#FFB000]/60 hover:text-[#FFB000] hover:bg-[#FFB000]/10 transition-colors active:scale-95 duration-100"
+          href="#education"
+          >FORMACIÓN</a
+        >
+        <a
+          class="text-[#FFB000]/60 hover:text-[#FFB000] hover:bg-[#FFB000]/10 transition-colors active:scale-95 duration-100"
+          href="#terminal"
+          >STACK</a
+        >
+        <a
+          class="text-[#FFB000]/60 hover:text-[#FFB000] hover:bg-[#FFB000]/10 transition-colors active:scale-95 duration-100"
+          href="#logs"
+          >CONTACTO</a
+        >
+      </div>
+    </nav>
+    <!-- SideNavBar (Desktop Only) -->
+    <aside
+      class="fixed left-0 top-0 h-full w-64 z-40 bg-[#131313] border-r border-[#FFB000]/15 hidden xl:flex flex-col py-8"
+    >
+      <div class="px-8 py-12">
+        <div class="flex items-center gap-4 mb-6">
+          <div
+            class="w-12 h-12 bg-surface-container-high border border-[#FFB000]/20 flex items-center justify-center"
+          >
+            <span
+              class="text-[#FFB000] font-black text-lg font-headline tracking-tighter"
+              >SL</span
+            >
+          </div>
+          <div>
+            <div class="text-lg font-black text-[#FFB000] font-headline">
+              SLB_ENGINEER
+            </div>
+            <div
+              class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+            >
+              V.1.0.0
+            </div>
+          </div>
+        </div>
+        <a
+          href="#logs"
+          class="block w-full text-center py-3 bg-[#FFB000] text-[#221700] font-headline text-[10px] font-bold tracking-[0.2em] hover:bg-primary-fixed-dim transition-colors"
+        >
+          CONTACTAR
+        </a>
+      </div>
+      <nav class="flex-1 px-4 space-y-2">
+        <a
+          class="flex items-center gap-4 px-4 py-3 text-[#FFB000] bg-[#FFB000]/10 font-bold border-r-4 border-[#FFB000] transition-transform hover:translate-x-1"
+          href="#archive"
+        >
+          <span class="material-symbols-outlined text-sm">deployed_code</span>
+          <span class="font-headline text-xs tracking-widest uppercase"
+            >PROYECTOS</span
+          >
+        </a>
+        <a
+          class="flex items-center gap-4 px-4 py-3 text-[#FFB000]/40 hover:bg-[#FFB000]/5 hover:text-[#FFB000] transition-transform hover:translate-x-1"
+          href="#history"
+        >
+          <span class="material-symbols-outlined text-sm">timeline</span>
+          <span class="font-headline text-xs tracking-widest uppercase"
+            >EXPERIENCIA</span
+          >
+        </a>
+        <a
+          class="flex items-center gap-4 px-4 py-3 text-[#FFB000]/40 hover:bg-[#FFB000]/5 hover:text-[#FFB000] transition-transform hover:translate-x-1"
+          href="#education"
+        >
+          <span class="material-symbols-outlined text-sm">school</span>
+          <span class="font-headline text-xs tracking-widest uppercase"
+            >FORMACIÓN</span
+          >
+        </a>
+        <a
+          class="flex items-center gap-4 px-4 py-3 text-[#FFB000]/40 hover:bg-[#FFB000]/5 hover:text-[#FFB000] transition-transform hover:translate-x-1"
+          href="#terminal"
+        >
+          <span class="material-symbols-outlined text-sm">terminal</span>
+          <span class="font-headline text-xs tracking-widest uppercase"
+            >STACK</span
+          >
+        </a>
+        <a
+          class="flex items-center gap-4 px-4 py-3 text-[#FFB000]/40 hover:bg-[#FFB000]/5 hover:text-[#FFB000] transition-transform hover:translate-x-1"
+          href="#logs"
+        >
+          <span class="material-symbols-outlined text-sm">rss_feed</span>
+          <span class="font-headline text-xs tracking-widest uppercase"
+            >CONTACTO</span
+          >
+        </a>
+      </nav>
+      <div class="px-4 space-y-2 mt-auto">
+        <a
+          class="flex items-center gap-4 px-4 py-2 text-[#FFB000]/40 hover:text-[#FFB000] transition-opacity"
+          href="https://linkedin.com/in/sergio-lopez-ballesteros"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="material-symbols-outlined text-sm">link</span>
+          <span class="font-headline text-[10px] tracking-widest uppercase"
+            >LINKEDIN</span
+          >
+        </a>
+        <a
+          class="flex items-center gap-4 px-4 py-2 text-[#FFB000]/40 hover:text-[#FFB000] transition-opacity"
+          href="mailto:sergiolopezballesteros@gmail.com"
+        >
+          <span class="material-symbols-outlined text-sm">mail</span>
+          <span class="font-headline text-[10px] tracking-widest uppercase"
+            >EMAIL</span
+          >
+        </a>
+      </div>
+    </aside>
+    <main class="xl:ml-64 pt-16 min-h-screen">
+      <!-- Hero Section -->
+      <section
+        class="min-h-[819px] flex flex-col justify-center px-8 md:px-20 relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-container/5 to-transparent pointer-events-none"
+        ></div>
+        <div class="relative z-10 space-y-6">
+          <div
+            class="inline-block py-1 px-3 bg-surface-container-low border border-[#FFB000]/20 text-[#FFB000] font-headline text-xs tracking-[0.3em] uppercase"
+          >
+            Status: Available
+          </div>
+          <h1
+            class="text-6xl md:text-8xl font-headline font-bold text-on-surface leading-tight tracking-tighter"
+          >
+            HOLA, MUNDO.<br />
+            SOY <span class="text-primary-container">SERGIO_LOPEZ</span>
+          </h1>
+          <p
+            class="text-xl md:text-2xl font-headline text-[#FFB000]/80 terminal-cursor max-w-2xl"
+          >
+            Frontend Software Engineer freelance con 16 años de experiencia.
+            Especialista en Angular, Nuxt e Ionic, arquitectura escalable y SSR.
+          </p>
+          <div class="flex gap-4 pt-8 flex-wrap">
+            <a
+              href="#archive"
+              class="bg-[#FFB000] text-[#221700] px-8 py-4 font-headline font-bold tracking-widest uppercase text-sm active:scale-95 transition-all"
+            >
+              &gt; VER_PROYECTOS
+            </a>
+            <a
+              href="#logs"
+              class="border border-[#FFB000]/40 text-[#FFB000] px-8 py-4 font-headline font-bold tracking-widest uppercase text-sm hover:bg-[#FFB000]/10 active:scale-95 transition-all"
+            >
+              CONTACTAR
+            </a>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-8 md:left-20 flex gap-12 font-headline text-[10px] tracking-[0.2em] text-[#FFB000]/30"
+        >
+          <div>EXPERIENCIA: 16 AÑOS</div>
+        </div>
+      </section>
+      <!-- Projects Grid -->
+      <section
+        class="py-24 px-8 md:px-20 bg-surface-container-low"
+        id="archive"
+      >
+        <div
+          class="flex justify-between items-end mb-16 border-b border-[#FFB000]/10 pb-4"
+        >
+          <h2
+            class="text-3xl font-headline font-bold text-primary-container uppercase tracking-tighter"
+          >
+            Featured_projects
+          </h2>
+          <span
+            class="text-[10px] font-headline text-[#FFB000]/40 tracking-widest"
+            >[ TOTAL_COUNT: 05 ]</span
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Project 1 -->
+          <div
+            class="group relative bg-surface border border-[#FFB000]/10 p-1 hover:border-[#FFB000]/40 transition-colors"
+          >
+            <div
+              class="aspect-video overflow-hidden relative bg-gradient-to-br from-[#FFB000]/15 via-[#FFB000]/5 to-transparent flex items-center justify-center"
+            >
+              <div
+                class="font-mono text-[#FFB000]/30 text-7xl font-black tracking-tighter"
+              >
+                01
+              </div>
+              <div
+                class="absolute inset-0 bg-[#FFB000]/5 mix-blend-overlay"
+              ></div>
+              <div
+                class="absolute bottom-3 left-4 font-mono text-[9px] text-[#FFB000]/60 tracking-widest uppercase"
+              >
+                // OTT_STREAMING
+              </div>
+              <div
+                class="absolute top-3 right-4 font-mono text-[9px] text-[#FFB000]/40 tracking-widest uppercase"
+              >
+                FEATURED
+              </div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3
+                  class="text-xl font-headline font-bold uppercase tracking-tight"
+                >
+                  PLATAFORMA_OTT
+                </h3>
+              </div>
+              <p class="text-sm text-on-surface/60 font-body">
+                Liderazgo técnico desde cero: análisis y diseño de arquitectura,
+                implementación con Nuxt 3 (SSR + Pinia) y migración posterior a
+                Nuxt 4. Plataforma de streaming en producción.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >NUXT 3/4</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >SSR</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >PINIA</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >TS</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >SCSS</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="group relative bg-surface border border-[#FFB000]/10 p-1 hover:border-[#FFB000]/40 transition-colors"
+          >
+            <div
+              class="aspect-video overflow-hidden relative bg-gradient-to-br from-[#FFB000]/10 via-[#FFB000]/5 to-transparent flex items-center justify-center"
+            >
+              <div
+                class="font-mono text-[#FFB000]/30 text-7xl font-black tracking-tighter"
+              >
+                02
+              </div>
+              <div
+                class="absolute inset-0 bg-[#FFB000]/5 mix-blend-overlay"
+              ></div>
+              <div
+                class="absolute bottom-3 left-4 font-mono text-[9px] text-[#FFB000]/60 tracking-widest uppercase"
+              >
+                // OTT_STREAMING
+              </div>
+              <div
+                class="absolute top-3 right-4 font-mono text-[9px] text-[#FFB000]/40 tracking-widest uppercase"
+              >
+                LONG_TERM
+              </div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3
+                  class="text-xl font-headline font-bold uppercase tracking-tight"
+                >
+                  LALIGA+
+                </h3>
+                <span
+                  class="text-[10px] font-headline px-2 py-1 bg-surface-container-highest text-[#FFB000] whitespace-nowrap"
+                  >MULTI-AÑO</span
+                >
+              </div>
+              <p class="text-sm text-on-surface/60 font-body">
+                Plataforma web de contenido en streaming. Desarrollo de nuevas
+                funcionalidades, mantenimiento evolutivo y migración progresiva
+                del framework desde Angular 7 hasta Angular 17 manteniendo el
+                servicio en producción.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >ANGULAR 7→17</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >RXJS</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >SCSS</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="group relative bg-surface border border-[#FFB000]/10 p-1 hover:border-[#FFB000]/40 transition-colors"
+          >
+            <div
+              class="aspect-video overflow-hidden relative bg-gradient-to-br from-[#FFB000]/10 via-[#FFB000]/5 to-transparent flex items-center justify-center"
+            >
+              <div
+                class="font-mono text-[#FFB000]/30 text-7xl font-black tracking-tighter"
+              >
+                03
+              </div>
+              <div
+                class="absolute inset-0 bg-[#FFB000]/5 mix-blend-overlay"
+              ></div>
+              <div
+                class="absolute bottom-3 left-4 font-mono text-[9px] text-[#FFB000]/60 tracking-widest uppercase"
+              >
+                // INDUSTRIAL_WEB+MOBILE
+              </div>
+              <div
+                class="absolute top-3 right-4 font-mono text-[9px] text-[#FFB000]/40 tracking-widest uppercase"
+              >
+                FULL_STACK
+              </div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3
+                  class="text-xl font-headline font-bold uppercase tracking-tight"
+                >
+                  FAMAEX
+                </h3>
+              </div>
+              <p class="text-sm text-on-surface/60 font-body">
+                Desarrollo de nuevas funcionalidades, mantenimiento y migración
+                de plataformas web en Angular 7 y Angular 11 para gestión
+                interna y servicios de mantenimiento. Desarrollo de aplicación
+                móvil con Ionic 3 para digitalizar procesos internos.
+                Participación en el desarrollo de una plataforma web con Ruby on
+                Rails 6/7.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >ANGULAR</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >IONIC</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >RAILS</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="group relative bg-surface border border-[#FFB000]/10 p-1 hover:border-[#FFB000]/40 transition-colors"
+          >
+            <div
+              class="aspect-video overflow-hidden relative bg-gradient-to-br from-[#FFB000]/10 via-[#FFB000]/5 to-transparent flex items-center justify-center"
+            >
+              <div
+                class="font-mono text-[#FFB000]/30 text-7xl font-black tracking-tighter"
+              >
+                04
+              </div>
+              <div
+                class="absolute inset-0 bg-[#FFB000]/5 mix-blend-overlay"
+              ></div>
+              <div
+                class="absolute bottom-3 left-4 font-mono text-[9px] text-[#FFB000]/60 tracking-widest uppercase"
+              >
+                // REAL_ESTATE_PLATFORM
+              </div>
+              <div
+                class="absolute top-3 right-4 font-mono text-[9px] text-[#FFB000]/40 tracking-widest uppercase"
+              >
+                ACTIVE
+              </div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3
+                  class="text-xl font-headline font-bold uppercase tracking-tight"
+                >
+                  EL BUEN INQUILINO
+                </h3>
+              </div>
+              <p class="text-sm text-on-surface/60 font-body">
+                Diseño e implementación de módulos y componentes para plataforma
+                de gestión interna desarrollada con Angular 18.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >ANGULAR 18</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >TYPESCRIPT</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >PRIMENG</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 (full-width) -->
+          <div
+            class="group relative bg-surface border border-[#FFB000]/10 p-1 hover:border-[#FFB000]/40 transition-colors md:col-span-2"
+          >
+            <div
+              class="aspect-[6/1] overflow-hidden relative bg-gradient-to-r from-[#FFB000]/10 via-[#FFB000]/5 to-transparent flex items-center px-8"
+            >
+              <div
+                class="font-mono text-[#FFB000]/30 text-6xl font-black tracking-tighter"
+              >
+                05
+              </div>
+              <div
+                class="absolute inset-0 bg-[#FFB000]/5 mix-blend-overlay"
+              ></div>
+              <div
+                class="absolute bottom-3 right-4 font-mono text-[9px] text-[#FFB000]/60 tracking-widest uppercase"
+              >
+                // HEALTHCARE_MESSAGING
+              </div>
+            </div>
+            <div class="p-6 space-y-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3
+                  class="text-xl font-headline font-bold uppercase tracking-tight"
+                >
+                  MY VITALE
+                </h3>
+              </div>
+              <p class="text-sm text-on-surface/60 font-body">
+                Plataforma web de mensajería instantánea en tiempo real
+                desarrollada con Angular 8 e integración del plugin CometChat.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >ANGULAR 8</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >COMETCHAT</span
+                >
+                <span
+                  class="px-2 py-1 bg-surface-container-high text-[#FFB000]/70 text-[9px] font-headline tracking-widest uppercase"
+                  >RXJS</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Deployment History Section -->
+      <section class="py-24 px-8 md:px-20 bg-surface" id="history">
+        <div
+          class="flex justify-between items-end mb-16 border-b border-[#FFB000]/10 pb-4"
+        >
+          <h2
+            class="text-3xl font-headline font-bold text-primary-container uppercase tracking-tighter"
+          >
+            Deployment_History
+          </h2>
+          <span
+            class="text-[10px] font-headline text-[#FFB000]/40 tracking-widest"
+            >[ SECTOR: ARCHIVE_LOGS ]</span
+          >
+        </div>
+        <div class="space-y-12">
+          <!-- Experience Entry 1 - Freelance -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-6xl text-[#FFB000]"
+                >terminal</span
+              >
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+              <div class="md:col-span-1 space-y-2">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [DATE_RANGE]
+                </div>
+                <div class="text-[#FFB000]">JUL 2019 — ACTUALIDAD</div>
+                <div
+                  class="pt-4 text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [COMPANY]
+                </div>
+                <div class="text-on-surface">TRABAJO_INDEPENDIENTE</div>
+              </div>
+              <div class="md:col-span-3 space-y-6">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [POSITION_TITLE]
+                  </div>
+                  <div
+                    class="text-xl font-bold text-[#FFB000] uppercase tracking-tighter"
+                  >
+                    Freelance_Software_Engineer
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [CORE_OBJECTIVES]
+                  </div>
+                  <ul class="space-y-1 text-on-surface/80 list-none">
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Desarrollo y
+                      mantenimiento de proyectos frontend en Nuxt 3/4 y Angular
+                      (6-18).
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Apps móviles
+                      multiplataforma con Ionic Framework.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Colaboración
+                      directa con equipos de producto y diseño en proyectos de
+                      larga duración.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [SYSTEMS_ACCESSED]
+                  </div>
+                  <div class="flex flex-wrap gap-x-6 gap-y-2 text-[#FFB000]/60">
+                    <span>NUXT_3/4</span>
+                    <span>ANGULAR_6-18</span>
+                    <span>IONIC_3/4</span>
+                    <span>PINIA</span>
+                    <span>RXJS</span>
+                    <span>SSR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Entry 2 - Nazaríes IT -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-6xl text-[#FFB000]"
+                >settings_ethernet</span
+              >
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+              <div class="md:col-span-1 space-y-2">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [DATE_RANGE]
+                </div>
+                <div class="text-[#FFB000]">FEB 2018 — JUL 2019</div>
+                <div
+                  class="pt-4 text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [COMPANY]
+                </div>
+                <div class="text-on-surface">NAZARIES_IT // GRANADA</div>
+              </div>
+              <div class="md:col-span-3 space-y-6">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [POSITION_TITLE]
+                  </div>
+                  <div
+                    class="text-xl font-bold text-[#FFB000] uppercase tracking-tighter"
+                  >
+                    Desarrollador_De_Software
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [CORE_OBJECTIVES]
+                  </div>
+                  <ul class="space-y-1 text-on-surface/80 list-none">
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Proyectos
+                      frontend en Angular y apps móviles con Ionic Framework.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Frontend y
+                      backend con Ruby on Rails.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Programa IoT de
+                      sensorización: apps híbridas iOS/Android, métricas y KPIs.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [SYSTEMS_ACCESSED]
+                  </div>
+                  <div class="flex flex-wrap gap-x-6 gap-y-2 text-[#FFB000]/60">
+                    <span>ANGULAR</span>
+                    <span>IONIC</span>
+                    <span>RUBY_ON_RAILS</span>
+                    <span>IOT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Entry 3 - Diario IDEAL -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-6xl text-[#FFB000]"
+                >newspaper</span
+              >
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+              <div class="md:col-span-1 space-y-2">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [DATE_RANGE]
+                </div>
+                <div class="text-[#FFB000]">MAR 2016 — AGO 2016</div>
+                <div
+                  class="pt-4 text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [COMPANY]
+                </div>
+                <div class="text-on-surface">DIARIO_IDEAL // GRANADA</div>
+              </div>
+              <div class="md:col-span-3 space-y-6">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [POSITION_TITLE]
+                  </div>
+                  <div
+                    class="text-xl font-bold text-[#FFB000] uppercase tracking-tighter"
+                  >
+                    Desarrollador_De_Software
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [CORE_OBJECTIVES]
+                  </div>
+                  <ul class="space-y-1 text-on-surface/80 list-none">
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Aplicaciones web
+                      bajo Zend Framework 2 y Doctrine 2.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Desarrollo con
+                      JavaScript, AJAX, MySQL y Bootstrap.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Atención de
+                      requisitos del cliente.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [SYSTEMS_ACCESSED]
+                  </div>
+                  <div class="flex flex-wrap gap-x-6 gap-y-2 text-[#FFB000]/60">
+                    <span>ZEND_2</span>
+                    <span>DOCTRINE_2</span>
+                    <span>MYSQL</span>
+                    <span>BOOTSTRAP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Entry 4 - Voilà Productora -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-6xl text-[#FFB000]"
+                >code</span
+              >
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+              <div class="md:col-span-1 space-y-2">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [DATE_RANGE]
+                </div>
+                <div class="text-[#FFB000]">MAY 2010 — JUL 2013</div>
+                <div
+                  class="pt-4 text-[10px] text-[#FFB000]/40 tracking-widest uppercase"
+                >
+                  [COMPANY]
+                </div>
+                <div class="text-on-surface">VOILA_PRODUCTORA // GRANADA</div>
+              </div>
+              <div class="md:col-span-3 space-y-6">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [POSITION_TITLE]
+                  </div>
+                  <div
+                    class="text-xl font-bold text-[#FFB000] uppercase tracking-tighter"
+                  >
+                    Desarrollador_De_Software
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [CORE_OBJECTIVES]
+                  </div>
+                  <ul class="space-y-1 text-on-surface/80 list-none">
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Desarrollo
+                      full-stack con PHP, JavaScript, jQuery y AJAX.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Análisis, diseño
+                      y modelado de aplicaciones.
+                    </li>
+                    <li class="flex gap-3">
+                      <span class="text-[#FFB000]">&gt;</span> Planificación,
+                      documentación y estrategias de SEO técnico.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                  >
+                    [SYSTEMS_ACCESSED]
+                  </div>
+                  <div class="flex flex-wrap gap-x-6 gap-y-2 text-[#FFB000]/60">
+                    <span>PHP</span>
+                    <span>JS</span>
+                    <span>JQUERY</span>
+                    <span>AJAX</span>
+                    <span>SEO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Academic Credentials Section -->
+      <section
+        class="py-24 px-8 md:px-20 bg-surface-container-low"
+        id="education"
+      >
+        <div
+          class="flex justify-between items-end mb-16 border-b border-[#FFB000]/10 pb-4"
+        >
+          <h2
+            class="text-3xl font-headline font-bold text-primary-container uppercase tracking-tighter"
+          >
+            Education_Logs
+          </h2>
+          <span
+            class="text-[10px] font-headline text-[#FFB000]/40 tracking-widest"
+            >[ SECTOR: ACADEMIC_CREDENTIALS ]</span
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <!-- Degree 1 -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-4xl text-[#FFB000]"
+                >school</span
+              >
+            </div>
+            <div class="space-y-6">
+              <div>
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                >
+                  [INSTITUTION_NAME]
+                </div>
+                <div
+                  class="text-lg font-bold text-on-surface uppercase tracking-tight"
+                >
+                  UNIVERSIDAD_DE_GRANADA
+                </div>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [DEGREE_NAME]
+                  </div>
+                  <div class="text-sm text-[#FFB000]">
+                    GRADO INGENIERÍA INFORMÁTICA
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [DATE_RANGE]
+                  </div>
+                  <div class="text-sm text-on-surface">2013 - 2019</div>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-[#FFB000]/10">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                >
+                  [ESPECIALIDAD]
+                </div>
+                <div
+                  class="text-xs text-on-surface/70 leading-relaxed uppercase tracking-wider"
+                >
+                  Tecnologías de la Información
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Degree 2 -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-4xl text-[#FFB000]"
+                >history_edu</span
+              >
+            </div>
+            <div class="space-y-6">
+              <div>
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                >
+                  [INSTITUTION_NAME]
+                </div>
+                <div
+                  class="text-lg font-bold text-on-surface uppercase tracking-tight"
+                >
+                  IES_ILIBERIS
+                </div>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [DEGREE_NAME]
+                  </div>
+                  <div class="text-sm text-[#FFB000]">
+                    TÉC. SUP. DESARROLLO SI
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [DATE_RANGE]
+                  </div>
+                  <div class="text-sm text-on-surface">2008 - 2010</div>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-[#FFB000]/10">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                >
+                  [NIVEL]
+                </div>
+                <div
+                  class="text-xs text-on-surface/70 leading-relaxed uppercase tracking-wider"
+                >
+                  Formación Profesional · Grado Superior
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Degree 3 -->
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono relative overflow-hidden group"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-4xl text-[#FFB000]"
+                >history_edu</span
+              >
+            </div>
+            <div class="space-y-6">
+              <div>
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                >
+                  [INSTITUTION_NAME]
+                </div>
+                <div
+                  class="text-lg font-bold text-on-surface uppercase tracking-tight"
+                >
+                  IES_ARICEL
+                </div>
+              </div>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [DEGREE_NAME]
+                  </div>
+                  <div class="text-sm text-[#FFB000]">
+                    TÉC. MED. EXPLOTACIÓN SI
+                  </div>
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-1"
+                  >
+                    [DATE_RANGE]
+                  </div>
+                  <div class="text-sm text-on-surface">2006 - 2008</div>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-[#FFB000]/10">
+                <div
+                  class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-2"
+                >
+                  [NIVEL]
+                </div>
+                <div
+                  class="text-xs text-on-surface/70 leading-relaxed uppercase tracking-wider"
+                >
+                  Formación Profesional · Grado Medio
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Idiomas -->
+        <div
+          class="mt-12 bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono"
+        >
+          <div
+            class="text-[10px] text-[#FFB000]/40 tracking-widest uppercase mb-6"
+          >
+            [LANGUAGES_LOG]
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="flex justify-between items-baseline pb-3 border-b border-[#FFB000]/10"
+            >
+              <span class="text-sm text-on-surface uppercase tracking-wider"
+                >Castellano</span
+              >
+              <span class="text-xs text-[#FFB000]">NATIVO</span>
+            </div>
+            <div
+              class="flex justify-between items-baseline pb-3 border-b border-[#FFB000]/10"
+            >
+              <span class="text-sm text-on-surface uppercase tracking-wider"
+                >Inglés</span
+              >
+              <span class="text-xs text-[#FFB000]">A2 · LECTURA</span>
+            </div>
+            <div
+              class="flex justify-between items-baseline pb-3 border-b border-[#FFB000]/10"
+            >
+              <span class="text-sm text-on-surface uppercase tracking-wider"
+                >L. de signos</span
+              >
+              <span class="text-xs text-[#FFB000]">BÁSICO-MEDIO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section (System Logs Style) -->
+      <section class="py-24 px-8 md:px-20 bg-surface" id="terminal">
+        <div class="max-w-4xl">
+          <div class="flex items-center gap-4 mb-12">
+            <div class="h-[1px] flex-1 bg-[#FFB000]/20"></div>
+            <h2
+              class="text-2xl font-headline font-bold text-primary-container uppercase tracking-[0.2em]"
+            >
+              TECH_STACK_DUMP
+            </h2>
+            <div class="h-[1px] flex-1 bg-[#FFB000]/20"></div>
+          </div>
+          <div
+            class="bg-surface-container-lowest border border-[#FFB000]/15 p-8 font-mono text-sm space-y-2 custom-scrollbar overflow-y-auto max-h-[600px]"
+          >
+            <div class="flex gap-4 text-[#FFB000]/40">
+              <span>[09:41:02]</span>
+              <span class="text-[#FFB000]">INITIALIZING_LANGUAGES...</span>
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >TypeScript / JavaScript ESNEXT :
+                <span class="text-[#FFB000]">STABLE</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >HTML5 / CSS3 : <span class="text-[#FFB000]">STABLE</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >PHP / Ruby :
+                <span class="text-[#FFB000]">SUPPORTED</span></span
+              >
+            </div>
+            <div class="flex gap-4 mt-6 text-[#FFB000]/40">
+              <span>[09:41:05]</span>
+              <span class="text-[#FFB000]"
+                >FETCHING_FRONTEND_FRAMEWORKS...</span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Angular 6 → 18 :
+                <span class="text-[#FFB000]">DEPLOYED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Nuxt 3 / Nuxt 4 (SSR) :
+                <span class="text-[#FFB000]">DEPLOYED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Vue 3 : <span class="text-[#FFB000]">ACTIVE</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Ionic 3 / Ionic 4 (iOS + Android) :
+                <span class="text-[#FFB000]">SHIPPED</span></span
+              >
+            </div>
+            <div class="flex gap-4 mt-6 text-[#FFB000]/40">
+              <span>[09:41:08]</span>
+              <span class="text-[#FFB000]">STATE_AND_STYLES...</span>
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Pinia / RxJS :
+                <span class="text-[#FFB000]">REACTIVE</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Sass/SCSS / Tailwind / Bootstrap :
+                <span class="text-[#FFB000]">RENDERED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Material UI / PrimeNG :
+                <span class="text-[#FFB000]">READY</span></span
+              >
+            </div>
+            <div class="flex gap-4 mt-6 text-[#FFB000]/40">
+              <span>[09:41:10]</span>
+              <span class="text-[#FFB000]">BACKEND_AND_CMS...</span>
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Node.js : <span class="text-[#FFB000]">RUNNING</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Ruby on Rails 6 / 7 :
+                <span class="text-[#FFB000]">CONNECTED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Directus / Zend Framework :
+                <span class="text-[#FFB000]">SUPPORTED</span></span
+              >
+            </div>
+            <div class="flex gap-4 mt-6 text-[#FFB000]/40">
+              <span>[09:41:12]</span>
+              <span class="text-[#FFB000]">DEVOPS_AND_QA...</span>
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Git / GitHub / GitLab / Bitbucket :
+                <span class="text-[#FFB000]">VERSIONED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >GitHub Actions / CI-CD :
+                <span class="text-[#FFB000]">AUTOMATED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Cypress : <span class="text-[#FFB000]">TESTED</span></span
+              >
+            </div>
+            <div class="flex gap-4 mt-6 text-[#FFB000]/40">
+              <span>[09:41:14]</span>
+              <span class="text-[#FFB000]">EXPERTISE_LAYER...</span>
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >SSR / PWA / Performance :
+                <span class="text-[#FFB000]">OPTIMIZED</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >SEO técnico / Accesibilidad WCAG :
+                <span class="text-[#FFB000]">COMPLIANT</span></span
+              >
+            </div>
+            <div class="flex gap-4 pl-8 text-on-surface/80">
+              <span>-</span>
+              <span class="text-on-surface"
+                >Figma / Jira / Agile / Scrum :
+                <span class="text-[#FFB000]">INTEGRATED</span></span
+              >
+            </div>
+            <div class="flex gap-4 mt-4 text-[#FFB000]">
+              <span>&gt;_</span>
+              <span class="animate-pulse"
+                >16_YEARS_OF_EXPERIENCE · SYSTEM_READY</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="py-24 px-8 md:px-20 bg-surface-container-low" id="logs">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div class="space-y-8">
+            <h2
+              class="text-4xl font-headline font-bold text-primary-container tracking-tighter uppercase"
+            >
+              Establish_Link
+            </h2>
+            <p class="text-on-surface/60 font-body leading-relaxed max-w-md">
+              ¿Tienes un proyecto frontend que requiere arquitectura sólida,
+              liderazgo técnico o un acompañamiento a largo plazo? Hablemos.
+            </p>
+            <div class="space-y-4 font-headline text-xs tracking-widest">
+              <a
+                href="mailto:sergiolopezballesteros@gmail.com"
+                class="flex items-center gap-4 text-[#FFB000] hover:text-on-surface transition-colors break-all"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >alternate_email</span
+                >
+                <span>SERGIOLOPEZBALLESTEROS@GMAIL.COM</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/sergio-lopez-ballesteros"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center gap-4 text-[#FFB000] hover:text-on-surface transition-colors"
+              >
+                <span class="material-symbols-outlined text-sm">link</span>
+                <span>LINKEDIN.COM/IN/SERGIO-LOPEZ-BALLESTEROS</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="w-full border-t border-[#FFB000]/15 bg-[#131313] flex justify-between items-center px-10 py-4"
+      >
+        <div
+          class="text-[#FFB000]/50 font-body text-[10px] uppercase tracking-[0.2em]"
+        >
+          © 2010—2026 SERGIO LÓPEZ BALLESTEROS · TODOS LOS DERECHOS RESERVADOS
+        </div>
+        <div class="flex gap-8">
+          <div
+            class="text-[#FFB000] font-body text-[10px] uppercase tracking-[0.2em] flex items-center gap-2"
+          >
+            <span
+              class="w-1.5 h-1.5 bg-[#FFB000] rounded-full animate-pulse"
+            ></span>
+            STATUS: AVAILABLE
+          </div>
+          <div
+            class="text-[#FFB000]/50 font-body text-[10px] uppercase tracking-[0.2em]"
+          >
+            EXPERIENCE: 16Y
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
