@@ -1,8 +1,8 @@
-# sergiolopez.github.io
+# sergiolopezballesteros.github.io
 
 > Personal portfolio of **Sergio López Ballesteros** — Frontend Software Engineer · Freelance · 16 years of experience.
 
-[![Live site](https://img.shields.io/badge/live-sergiolopez.github.io-FFB000?style=flat-square)](https://sergiolopez.github.io)
+[![Live site](https://img.shields.io/badge/live-sergiolopezballesteros.github.io-FFB000?style=flat-square)](https://sergiolopezballesteros.github.io)
 [![Status](https://img.shields.io/badge/status-available_for_projects-22c55e?style=flat-square)](mailto:sergiolopezballesteros@gmail.com)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
 
@@ -32,8 +32,8 @@ No build pipeline. No `package.json`. The entire portfolio lives in a single HTM
 ## Run it locally
 
 ```bash
-git clone https://github.com/sergiolopez/sergiolopez.github.io.git
-cd sergiolopez.github.io
+git clone https://github.com/sergiolopezballesteros/sergiolopezballesteros.github.io.git
+cd sergiolopezballesteros.github.io
 ```
 
 Then either open `index.html` directly in your browser.
